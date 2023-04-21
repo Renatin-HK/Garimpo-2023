@@ -1,0 +1,968 @@
+fileFormatVersion: 2
+guid: 742bf75160473b44184b9663a49c46f8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3833530875081419130
+    second: Astronauta_0
+  - first:
+      213: 6574595560284247379
+    second: Astronauta_1
+  - first:
+      213: 7861604690578774636
+    second: Astronauta_2
+  - first:
+      213: 7066807737040671707
+    second: Astronauta_3
+  - first:
+      213: -5726826806118424545
+    second: Astronauta_4
+  - first:
+      213: 8845257205231919306
+    second: Astronauta_5
+  - first:
+      213: 4106611081132551882
+    second: Astronauta_6
+  - first:
+      213: 6328253316890572093
+    second: Astronauta_7
+  - first:
+      213: -3381353662554761051
+    second: Astronauta_8
+  - first:
+      213: 731304499390841930
+    second: Astronauta_9
+  - first:
+      213: 160797224046006927
+    second: Astronauta_10
+  - first:
+      213: -539288158521809090
+    second: Astronauta_11
+  - first:
+      213: -2733362008838153562
+    second: Astronauta_12
+  - first:
+      213: -4924432917303748131
+    second: Astronauta_13
+  - first:
+      213: -2236588815787376338
+    second: Astronauta_14
+  - first:
+      213: 3570236615029435112
+    second: Astronauta_15
+  - first:
+      213: 2139963906939105140
+    second: Astronauta_16
+  - first:
+      213: 5223802900345181357
+    second: Astronauta_17
+  - first:
+      213: 4164801477175346310
+    second: Astronauta_18
+  - first:
+      213: 5126834201186399
+    second: Astronauta_19
+  - first:
+      213: 1118431085540319663
+    second: Astronauta_20
+  - first:
+      213: 3093794238976108208
+    second: Astronauta_21
+  - first:
+      213: 5435060923162351633
+    second: Astronauta_22
+  - first:
+      213: 4184963288782613533
+    second: Astronauta_23
+  - first:
+      213: 5174730080526815780
+    second: Astronauta_24
+  - first:
+      213: 1171264776819861098
+    second: Astronauta_25
+  - first:
+      213: -980671542969048370
+    second: Astronauta_26
+  - first:
+      213: 5901311789717869556
+    second: Astronauta_27
+  - first:
+      213: 2723432599957057894
+    second: Astronauta_28
+  - first:
+      213: 1825585206607968322
+    second: Astronauta_29
+  - first:
+      213: 370029345923723593
+    second: Astronauta_30
+  - first:
+      213: 3206728002284472347
+    second: Astronauta_31
+  - first:
+      213: 3271587686911714134
+    second: Astronauta_32
+  - first:
+      213: -1246042023996884446
+    second: Astronauta_33
+  - first:
+      213: -2887846835022922163
+    second: Astronauta_34
+  - first:
+      213: -2651595331160304014
+    second: Astronauta_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Astronauta_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 214
+        width: 27
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7968bc1500733530800000000000000
+      internalID: 3833530875081419130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 215
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3555a9014d7ad3b50800000000000000
+      internalID: 6574595560284247379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_2
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 215
+        width: 28
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a1e7240d70a1d60800000000000000
+      internalID: 7861604690578774636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_3
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 215
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd39a4ef138521260800000000000000
+      internalID: 7066807737040671707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 175
+        width: 27
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f106023ac593680b0800000000000000
+      internalID: -5726826806118424545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 174
+        width: 27
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac020d0609aa0ca70800000000000000
+      internalID: 8845257205231919306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_6
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 175
+        width: 25
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acea691450d9df830800000000000000
+      internalID: 4106611081132551882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_7
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 175
+        width: 27
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3533f9fcd872d750800000000000000
+      internalID: 6328253316890572093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_8
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 175
+        width: 27
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8157352c40311d0800000000000000
+      internalID: -3381353662554761051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_9
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 174
+        width: 27
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4406dc419d162a00800000000000000
+      internalID: 731304499390841930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_10
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 175
+        width: 27
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82912c29344b3200800000000000000
+      internalID: 160797224046006927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_11
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 174
+        width: 27
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37abbfe6401488f0800000000000000
+      internalID: -539288158521809090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_12
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 131
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa57a42cb5211ad0800000000000000
+      internalID: -2733362008838153562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_13
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 130
+        width: 26
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd99edb3a56e8abb0800000000000000
+      internalID: -4924432917303748131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_14
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 133
+        width: 25
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21c16e625a06f0e0800000000000000
+      internalID: -2236588815787376338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_15
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 130
+        width: 26
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea2ce219470c8130800000000000000
+      internalID: 3570236615029435112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_16
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 131
+        width: 27
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f2349d5dda2bd10800000000000000
+      internalID: 2139963906939105140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_17
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 130
+        width: 26
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4dabb9f0dae7840800000000000000
+      internalID: 5223802900345181357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_18
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 132
+        width: 26
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6840f0f90e85cc930800000000000000
+      internalID: 4164801477175346310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_19
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 130
+        width: 25
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50526b14d6321000800000000000000
+      internalID: 5126834201186399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_20
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 87
+        width: 28
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1a2678527758f00800000000000000
+      internalID: 1118431085540319663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_21
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 86
+        width: 27
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6225ef77d5fea20800000000000000
+      internalID: 3093794238976108208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_22
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 86
+        width: 27
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118d2b90d173d6b40800000000000000
+      internalID: 5435060923162351633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_23
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 86
+        width: 27
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c20f130f9f31a30800000000000000
+      internalID: 4184963288782613533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_24
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 87
+        width: 28
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4225452679550d740800000000000000
+      internalID: 5174730080526815780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_25
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 86
+        width: 27
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a666640eb1b214010800000000000000
+      internalID: 1171264776819861098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_26
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 86
+        width: 27
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2eeff6d64f362f0800000000000000
+      internalID: -980671542969048370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_27
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 86
+        width: 27
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f355f66ecba5e150800000000000000
+      internalID: 5901311789717869556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_28
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 43
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661b82235839bc520800000000000000
+      internalID: 2723432599957057894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_29
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 42
+        width: 25
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2487313b218c55910800000000000000
+      internalID: 1825585206607968322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_30
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 44
+        width: 24
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941f048cabb922500800000000000000
+      internalID: 370029345923723593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_31
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 43
+        width: 25
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18c67bc026908c20800000000000000
+      internalID: 3206728002284472347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_32
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 43
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6532ae9eaa3076d20800000000000000
+      internalID: 3271587686911714134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_33
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 42
+        width: 25
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22af478816b25bee0800000000000000
+      internalID: -1246042023996884446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_34
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 44
+        width: 24
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ef8b0aa9e4ce7d0800000000000000
+      internalID: -2887846835022922163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronauta_35
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 43
+        width: 25
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2761b165814a33bd0800000000000000
+      internalID: -2651595331160304014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
