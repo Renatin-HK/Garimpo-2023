@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 8d0f025b5743eb34e98536b33c66f6ee,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -121,6 +122,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &894858001 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3788824579183985036, guid: e66c55c28dc452340b9a9de262e06a0a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3788824578234656722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1173504741
 GameObject:
   m_ObjectHideFlags: 0
@@ -11418,6 +11425,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1822788075038242078, guid: e66c55c28dc452340b9a9de262e06a0a,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822788075038242078, guid: e66c55c28dc452340b9a9de262e06a0a,
+        type: 3}
+      propertyPath: walkDir
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822788075038242078, guid: e66c55c28dc452340b9a9de262e06a0a,
+        type: 3}
+      propertyPath: shootDir
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822788075038242078, guid: e66c55c28dc452340b9a9de262e06a0a,
+        type: 3}
+      propertyPath: canChangeState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035793379011196711, guid: e66c55c28dc452340b9a9de262e06a0a,
+        type: 3}
+      propertyPath: State
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035793379011196711, guid: e66c55c28dc452340b9a9de262e06a0a,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 894858001}
+    - target: {fileID: 2035793379011196711, guid: e66c55c28dc452340b9a9de262e06a0a,
+        type: 3}
+      propertyPath: newState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3788824579183985032, guid: e66c55c28dc452340b9a9de262e06a0a,
         type: 3}
       propertyPath: m_Name

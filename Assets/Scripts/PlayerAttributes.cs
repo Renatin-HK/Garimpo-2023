@@ -20,9 +20,11 @@ public class PlayerAttributes : MonoBehaviour {
     public bool isWalking;
     public bool isShooting;
     public bool canChangeState;
+    public bool lastActionShoot;
 
     [Header ("State Machine")]
-    public StateMachine State;
+    public StateMachine state;
+    public StateMachine newState;
     public enum StateMachine {
         IDLE_UP,
         IDLE_LEFT,
@@ -70,6 +72,17 @@ public class PlayerAttributes : MonoBehaviour {
         #endregion
     }
 
-    public void StateManager (StateMachine newState) => State = canChangeState ? newState : State;
+    public void StateManager (StateMachine nextState) {
+        Debug.Log ("State changed: " + state + " to " + nextState);
+        state = canChangeState ? nextState : state;
+    }
 
+    private void Start () {
+        newState = StateMachine.IDLE_UP;
+        state = StateMachine.IDLE_UP;
+        canChangeState = true;
+        player = GetComponent<Transform> ();
+        walkDir = 4;
+        shootDir = 4;
+    }
 }

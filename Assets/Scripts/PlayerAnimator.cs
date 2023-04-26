@@ -12,31 +12,46 @@ public class PlayerAnimator : MonoBehaviour {
     bool isWalking, isShooting;
     int dir;
 
+    void Start () {
+        controller = GetComponent<PlayerController> ();
+        animator = GetComponent<Animator> ();
+        pa = GetComponent<PlayerAttributes> ();
+        state = STATE.IDLEDOWN;
+    }
+    void Update () {
+        // Animate ();
+        // CheckState ();
+        // UpdateState ();
+
+        StateConditions ();
+        SetUpDirections ();
+        ChangeAnimationToState ();
+    }
+
     #region Yuri code
-    void UpdateAnimationIF () {
-        if (pa.State == PlayerAttributes.StateMachine.WALKING_UP) animator.Play ("Walking_Up");
-        else if (pa.State == PlayerAttributes.StateMachine.WALKING_DOWN) animator.Play ("Walking_Down");
-        else if (pa.State == PlayerAttributes.StateMachine.WALKING_LEFT) animator.Play ("Walking_Left");
-        else if (pa.State == PlayerAttributes.StateMachine.WALKING_RIGHT) animator.Play ("Walking_Right");
+    void ChangeAnimationToStateIF () {
+        if (pa.state == PlayerAttributes.StateMachine.WALKING_UP) animator.Play ("Walking_Up");
+        else if (pa.state == PlayerAttributes.StateMachine.WALKING_DOWN) animator.Play ("Walking_Down");
+        else if (pa.state == PlayerAttributes.StateMachine.WALKING_LEFT) animator.Play ("Walking_Left");
+        else if (pa.state == PlayerAttributes.StateMachine.WALKING_RIGHT) animator.Play ("Walking_Right");
 
-        else if (pa.State == PlayerAttributes.StateMachine.IDLE_UP) animator.Play ("Idle_Up");
-        else if (pa.State == PlayerAttributes.StateMachine.IDLE_DOWN) animator.Play ("Idle_Down");
-        else if (pa.State == PlayerAttributes.StateMachine.IDLE_LEFT) animator.Play ("Idle_Left");
-        else if (pa.State == PlayerAttributes.StateMachine.IDLE_RIGHT) animator.Play ("Idle_Right");
+        else if (pa.state == PlayerAttributes.StateMachine.IDLE_UP) animator.Play ("Idle_Up");
+        else if (pa.state == PlayerAttributes.StateMachine.IDLE_DOWN) animator.Play ("Idle_Down");
+        else if (pa.state == PlayerAttributes.StateMachine.IDLE_LEFT) animator.Play ("Idle_Left");
+        else if (pa.state == PlayerAttributes.StateMachine.IDLE_RIGHT) animator.Play ("Idle_Right");
 
-        else if (pa.State == PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_DOWN) animator.Play ("Walking_Up");
-        else if (pa.State == PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_LEFTRIGHT) animator.Play ("Walking_Up");
+        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_DOWN) animator.Play ("Walking_Up");
+        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_LEFTRIGHT) animator.Play ("Walking_Up");
 
-        else if (pa.State == PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_UP) animator.Play ("Walking_Down");
-        else if (pa.State == PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_LEFTRIGHT) animator.Play ("Walking_Down");
+        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_UP) animator.Play ("Walking_Down");
+        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_LEFTRIGHT) animator.Play ("Walking_Down");
 
-        else if (pa.State == PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_RIGHT) animator.Play ("Walking_Left");
-        else if (pa.State == PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_UPDOWN) animator.Play ("Walking_Left");
+        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_RIGHT) animator.Play ("Walking_Left");
+        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_UPDOWN) animator.Play ("Walking_Left");
 
-        else if (pa.State == PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_LEFT) animator.Play ("Walking_Right");
-        else if (pa.State == PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_UPDOWN) animator.Play ("Walking_Right");
+        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_LEFT) animator.Play ("Walking_Right");
+        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_UPDOWN) animator.Play ("Walking_Right");
 
-        #region Just in case?
         // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_UP_SHOOTING_LEFT) animator.Play ("");
         // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_UP_SHOOTING_RIGHT) animator.Play ("");
         // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_UP_SHOOTING_DOWN) animator.Play ("");
@@ -52,11 +67,24 @@ public class PlayerAnimator : MonoBehaviour {
         // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_DOWN_SHOOTING_UP) animator.Play ("");
         // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_DOWN_SHOOTING_LEFT) animator.Play ("");
         // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_DOWN_SHOOTING_RIGHT) animator.Play ("");
-        #endregion
     }
 
-    void UpdateAnimationByPlayerState () {
-        switch (pa.State) {
+    void ChangeAnimationToState () {
+        Debug.Log ("new State: " + pa.newState);
+        Debug.Log ("State: " + pa.state);
+        switch (pa.state) {
+            case PlayerAttributes.StateMachine.IDLE_UP:
+                animator.Play ("Idle_Up");
+                break;
+            case PlayerAttributes.StateMachine.IDLE_DOWN:
+                animator.Play ("Idle_Down");
+                break;
+            case PlayerAttributes.StateMachine.IDLE_LEFT:
+                animator.Play ("Idle_Left");
+                break;
+            case PlayerAttributes.StateMachine.IDLE_RIGHT:
+                animator.Play ("Idle_Right");
+                break;
             case PlayerAttributes.StateMachine.WALKING_UP:
                 animator.Play ("Walking_Up");
                 break;
@@ -69,16 +97,16 @@ public class PlayerAnimator : MonoBehaviour {
             case PlayerAttributes.StateMachine.WALKING_RIGHT:
                 animator.Play ("Walking_Right");
                 break;
-            case PlayerAttributes.StateMachine.IDLE_UP:
+            case PlayerAttributes.StateMachine.SHOOTING_UP:
                 animator.Play ("Idle_Up");
                 break;
-            case PlayerAttributes.StateMachine.IDLE_DOWN:
+            case PlayerAttributes.StateMachine.SHOOTING_DOWN:
                 animator.Play ("Idle_Down");
                 break;
-            case PlayerAttributes.StateMachine.IDLE_LEFT:
+            case PlayerAttributes.StateMachine.SHOOTING_LEFT:
                 animator.Play ("Idle_Left");
                 break;
-            case PlayerAttributes.StateMachine.IDLE_RIGHT:
+            case PlayerAttributes.StateMachine.SHOOTING_RIGHT:
                 animator.Play ("Idle_Right");
                 break;
             case PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_DOWN:
@@ -105,80 +133,104 @@ public class PlayerAnimator : MonoBehaviour {
             case PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_UPDOWN:
                 animator.Play ("Walking_Right");
                 break;
-            default:
-                break;
         }
     }
 
     void StateConditions () {
-        //TODO Change to Switch statement?
-        PlayerAttributes.StateMachine newState = pa.State;
-        // Idle Conditions
-        if (!pa.isWalking && !pa.isShooting) {
-            newState = pa.walkDir == 1 ? PlayerAttributes.StateMachine.IDLE_UP : pa.State;
-            newState = pa.walkDir == 2 ? PlayerAttributes.StateMachine.IDLE_DOWN : pa.State;
-            newState = pa.walkDir == 3 ? PlayerAttributes.StateMachine.IDLE_LEFT : pa.State;
-            newState = pa.walkDir == 4 ? PlayerAttributes.StateMachine.IDLE_RIGHT : pa.State;
-        }
-
-        // Idle-Shooting Conditions
-        if (!isWalking && isShooting) {
-            newState = pa.shootDir == 1 ? PlayerAttributes.StateMachine.SHOOTING_UP : pa.State;
-            newState = pa.shootDir == 2 ? PlayerAttributes.StateMachine.SHOOTING_LEFT : pa.State;
-            newState = pa.shootDir == 3 ? PlayerAttributes.StateMachine.SHOOTING_LEFT : pa.State;
-            newState = pa.shootDir == 4 ? PlayerAttributes.StateMachine.SHOOTING_RIGHT : pa.State;
-        }
-
-        // Walking Conditions
-        if (isWalking && !isShooting) {
-            newState = pa.walkDir == 1 ? PlayerAttributes.StateMachine.WALKING_UP : pa.State;
-            newState = pa.walkDir == 2 ? PlayerAttributes.StateMachine.WALKING_DOWN : pa.State;
-            newState = pa.walkDir == 3 ? PlayerAttributes.StateMachine.WALKING_LEFT : pa.State;
-            newState = pa.walkDir == 4 ? PlayerAttributes.StateMachine.WALKING_RIGHT : pa.State;
-        }
-
         // Walking-Shooting Conditions
-        if (isWalking && isShooting) {
-            newState = pa.shootDir == 1 && pa.walkDir == 1 ?
-                PlayerAttributes.StateMachine.WALKING_UP : pa.State;
-            newState = pa.shootDir == 1 && pa.walkDir == 2 ?
-                PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_DOWN : pa.State;
-            newState = pa.shootDir == 1 && (pa.walkDir == 3 || pa.walkDir == 4) ?
-                PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_LEFTRIGHT : pa.State;
+        if (pa.isWalking && pa.isShooting) {
+            Debug.Log ("walking n shooting");
+            if (pa.shootDir != pa.walkDir) {
+                pa.newState = pa.walkDir == 1 ? PlayerAttributes.StateMachine.WALKING_UP :
+                    pa.walkDir == 2 ? PlayerAttributes.StateMachine.WALKING_DOWN :
+                    pa.walkDir == 3 ? PlayerAttributes.StateMachine.WALKING_LEFT :
+                    PlayerAttributes.StateMachine.WALKING_RIGHT;
+            } else {
+                if (pa.shootDir == 1) {
+                    pa.newState = pa.walkDir == 2 ? PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_DOWN :
+                        pa.walkDir == 3 || pa.walkDir == 4 ? PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_LEFTRIGHT :
+                        pa.state;
+                }
+                if (pa.shootDir == 2) {
+                    pa.newState = pa.walkDir == 1 ? PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_UP :
+                        pa.walkDir == 3 || pa.walkDir == 4 ? PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_LEFTRIGHT :
+                        pa.state;
+                }
+                if (pa.shootDir == 3) {
+                    pa.newState = pa.walkDir == 4 ? PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_RIGHT :
+                        pa.walkDir == 1 || pa.walkDir == 2 ? PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_UPDOWN :
+                        pa.state;
+                }
+                if (pa.shootDir == 4) {
+                    pa.newState = pa.walkDir == 4 ? PlayerAttributes.StateMachine.WALKING_RIGHT :
+                        pa.walkDir == 3 ? PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_LEFT :
+                        pa.walkDir == 1 || pa.walkDir == 2 ? PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_UPDOWN :
+                        pa.state;
+                }
+            }
 
-            newState = pa.shootDir == 2 && pa.walkDir == 2 ?
-                PlayerAttributes.StateMachine.WALKING_DOWN : pa.State;
-            newState = pa.shootDir == 2 && pa.walkDir == 1 ?
-                PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_UP : pa.State;
-            newState = pa.shootDir == 2 && (pa.walkDir == 3 || pa.walkDir == 4) ?
-                PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_LEFTRIGHT : pa.State;
-
-            newState = pa.shootDir == 3 && pa.walkDir == 3 ?
-                PlayerAttributes.StateMachine.WALKING_LEFT : pa.State;
-            newState = pa.shootDir == 3 && pa.walkDir == 4 ?
-                PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_RIGHT : pa.State;
-            newState = pa.shootDir == 3 && (pa.walkDir == 1 || pa.walkDir == 2) ?
-                PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_UPDOWN : pa.State;
-
-            newState = pa.shootDir == 4 && pa.walkDir == 4 ?
-                PlayerAttributes.StateMachine.WALKING_RIGHT : pa.State;
-            newState = pa.shootDir == 4 && pa.walkDir == 3 ?
-                PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_LEFT : pa.State;
-            newState = pa.shootDir == 4 && (pa.walkDir == 1 || pa.walkDir == 2) ?
-                PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_UPDOWN : pa.State;
-
+        }
+        // Walking Conditions
+        else if (pa.isWalking) {
+            Debug.Log ("walking");
+            pa.newState = pa.walkDir == 1 ? PlayerAttributes.StateMachine.WALKING_UP :
+                pa.walkDir == 2 ? PlayerAttributes.StateMachine.WALKING_DOWN :
+                pa.walkDir == 3 ? PlayerAttributes.StateMachine.WALKING_LEFT :
+                pa.walkDir == 4 ? PlayerAttributes.StateMachine.WALKING_RIGHT : pa.state;
+        }
+        // Idle-Shooting Conditions
+        else if (pa.isShooting) {
+            Debug.Log ("shooting");
+            pa.newState = pa.shootDir == 1 ? PlayerAttributes.StateMachine.SHOOTING_UP :
+                pa.shootDir == 2 ? PlayerAttributes.StateMachine.SHOOTING_DOWN :
+                pa.shootDir == 3 ? PlayerAttributes.StateMachine.SHOOTING_LEFT :
+                pa.shootDir == 4 ? PlayerAttributes.StateMachine.SHOOTING_RIGHT : pa.state;
+            pa.walkDir = pa.shootDir;
+        }
+        // Idle Conditions
+        // (!pa.isWalking && !pa.isShooting)
+        else {
+            Debug.Log ("idle");
+            pa.newState = pa.walkDir == 1 ? PlayerAttributes.StateMachine.IDLE_UP :
+                pa.walkDir == 2 ? PlayerAttributes.StateMachine.IDLE_DOWN :
+                pa.walkDir == 3 ? PlayerAttributes.StateMachine.IDLE_LEFT :
+                pa.walkDir == 4 ? PlayerAttributes.StateMachine.IDLE_RIGHT : pa.state;
         }
         // Change the State
-        pa.StateManager (newState);
+        if (!pa.state.Equals (pa.newState)) pa.StateManager (pa.newState);
     }
+
+    void SetUpDirections () {
+
+        pa.isWalking = (controller.horizontal != 0 || controller.vertical != 0);
+        pa.isShooting = (controller.shootHorizontal != 0 || controller.shootVertical != 0);
+
+        if (pa.isWalking) {
+            pa.walkDir = controller.vertical > 0 ? 1 : controller.vertical < 0 ? 2 :
+                controller.horizontal<0 ? 3 : controller.horizontal> 0 ? 4 : pa.walkDir;
+            pa.lastActionShoot = false;
+            // if (controller.vertical > 0) pa.walkDir = 1;
+            // if (controller.vertical < 0) pa.walkDir = 2;
+            // if (controller.horizontal < 0) pa.walkDir = 3;
+            // if (controller.horizontal > 0) pa.walkDir = 4;
+        }
+        if (pa.isShooting) {
+            pa.shootDir = controller.shootVertical > 0 ? 1 : controller.shootVertical < 0 ? 2 :
+                controller.shootHorizontal<0 ? 3 : controller.shootHorizontal> 0 ? 4 : pa.shootDir;
+            pa.lastActionShoot = true;
+            // if (controller.shootVertical > 0) pa.shootDir = 1;
+            // if (controller.shootVertical < 0) pa.shootDir = 2;
+            // if (controller.shootHorizontal < 0) pa.shootDir = 3;
+            // if (controller.shootHorizontal > 0) pa.shootDir = 4;
+        }
+        //TODO Remove this once lookDir logic is done
+        //pa.walkDir = pa.lastActionShoot ? pa.shootDir : pa.walkDir;
+
+    }
+
     #endregion
     // #################################################################################################################
     #region Renatin code
-    void Start () {
-        controller = GetComponent<PlayerController> ();
-        animator = GetComponent<Animator> ();
-        state = STATE.IDLEDOWN;
-    }
     enum STATE {
         WALKINGUP,
         WALKINGDOWN,
@@ -189,12 +241,6 @@ public class PlayerAnimator : MonoBehaviour {
         IDLEDOWN,
         IDLELEFT,
         IDLERIGHT,
-    }
-
-    void Update () {
-        Animate ();
-        CheckState ();
-        UpdateState ();
     }
 
     void Animate () {

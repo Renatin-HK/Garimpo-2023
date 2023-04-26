@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 3788824579183985037}
   - component: {fileID: 3788824579183985075}
   - component: {fileID: 3788824579183985072}
+  - component: {fileID: 1822788075038242078}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -324,3 +325,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0d28031aa2a104a973830516e264ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1822788075038242078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3788824579183985032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9143e47974fbc5249a28fdafacf8c54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  movSpeed: 0
+  fireRate: 0
+  walkDir: 0
+  shootDir: 0
+  player: {fileID: 3788824579183985036}
+  gunPoint: {fileID: 0}
+  isAlive: 0
+  isWalking: 0
+  isShooting: 0
+  canChangeState: 0
+  State: 0
+  newState: 0
