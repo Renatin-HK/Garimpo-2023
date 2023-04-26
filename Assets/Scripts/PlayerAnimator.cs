@@ -29,45 +29,6 @@ public class PlayerAnimator : MonoBehaviour {
     }
 
     #region Yuri code
-    void ChangeAnimationToStateIF () {
-        if (pa.state == PlayerAttributes.StateMachine.WALKING_UP) animator.Play ("Walking_Up");
-        else if (pa.state == PlayerAttributes.StateMachine.WALKING_DOWN) animator.Play ("Walking_Down");
-        else if (pa.state == PlayerAttributes.StateMachine.WALKING_LEFT) animator.Play ("Walking_Left");
-        else if (pa.state == PlayerAttributes.StateMachine.WALKING_RIGHT) animator.Play ("Walking_Right");
-
-        else if (pa.state == PlayerAttributes.StateMachine.IDLE_UP) animator.Play ("Idle_Up");
-        else if (pa.state == PlayerAttributes.StateMachine.IDLE_DOWN) animator.Play ("Idle_Down");
-        else if (pa.state == PlayerAttributes.StateMachine.IDLE_LEFT) animator.Play ("Idle_Left");
-        else if (pa.state == PlayerAttributes.StateMachine.IDLE_RIGHT) animator.Play ("Idle_Right");
-
-        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_DOWN) animator.Play ("Walking_Up");
-        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_LEFTRIGHT) animator.Play ("Walking_Up");
-
-        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_UP) animator.Play ("Walking_Down");
-        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_LEFTRIGHT) animator.Play ("Walking_Down");
-
-        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_RIGHT) animator.Play ("Walking_Left");
-        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_UPDOWN) animator.Play ("Walking_Left");
-
-        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_LEFT) animator.Play ("Walking_Right");
-        else if (pa.state == PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_UPDOWN) animator.Play ("Walking_Right");
-
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_UP_SHOOTING_LEFT) animator.Play ("");
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_UP_SHOOTING_RIGHT) animator.Play ("");
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_UP_SHOOTING_DOWN) animator.Play ("");
-
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_LEFT_SHOOTING_UP) animator.Play ("");
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_LEFT_SHOOTING_RIGHT) animator.Play ("");
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_LEFT_SHOOTING_DOWN) animator.Play ("");
-
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_RIGHT_SHOOTING_UP) animator.Play ("");
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_RIGHT_SHOOTING_LEFT) animator.Play ("");
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_RIGHT_SHOOTING_DOWN) animator.Play ("");
-
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_DOWN_SHOOTING_UP) animator.Play ("");
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_DOWN_SHOOTING_LEFT) animator.Play ("");
-        // else if (pa.PlayerState == PlayerAttributes.PlayerStateMachine.WALKING_DOWN_SHOOTING_RIGHT) animator.Play ("");
-    }
 
     void ChangeAnimationToState () {
         Debug.Log ("new State: " + pa.newState);
@@ -140,7 +101,7 @@ public class PlayerAnimator : MonoBehaviour {
         // Walking-Shooting Conditions
         if (pa.isWalking && pa.isShooting) {
             Debug.Log ("walking n shooting");
-            if (pa.shootDir != pa.walkDir) {
+            if (pa.shootDir == pa.walkDir) {
                 pa.newState = pa.walkDir == 1 ? PlayerAttributes.StateMachine.WALKING_UP :
                     pa.walkDir == 2 ? PlayerAttributes.StateMachine.WALKING_DOWN :
                     pa.walkDir == 3 ? PlayerAttributes.StateMachine.WALKING_LEFT :
@@ -168,7 +129,6 @@ public class PlayerAnimator : MonoBehaviour {
                         pa.state;
                 }
             }
-
         }
         // Walking Conditions
         else if (pa.isWalking) {
