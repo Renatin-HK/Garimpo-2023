@@ -342,11 +342,12 @@ MonoBehaviour:
   fireRate: 0
   walkDir: 0
   shootDir: 0
-  player: {fileID: 3788824579183985036}
+  player: {fileID: 0}
   gunPoint: {fileID: 0}
   isAlive: 0
   isWalking: 0
   isShooting: 0
   canChangeState: 0
-  State: 0
+  lastActionShoot: 0
+  state: 0
   newState: 0

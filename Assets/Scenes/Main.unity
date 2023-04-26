@@ -11425,26 +11425,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1822788075038242078, guid: e66c55c28dc452340b9a9de262e06a0a,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822788075038242078, guid: e66c55c28dc452340b9a9de262e06a0a,
-        type: 3}
-      propertyPath: walkDir
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822788075038242078, guid: e66c55c28dc452340b9a9de262e06a0a,
-        type: 3}
-      propertyPath: shootDir
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1822788075038242078, guid: e66c55c28dc452340b9a9de262e06a0a,
-        type: 3}
-      propertyPath: canChangeState
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2035793379011196711, guid: e66c55c28dc452340b9a9de262e06a0a,
         type: 3}
       propertyPath: State
