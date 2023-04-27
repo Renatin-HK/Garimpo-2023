@@ -71,25 +71,25 @@ public class PlayerAnimator : MonoBehaviour {
                 animator.Play ("Idle_Right");
                 break;
             case PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_DOWN:
-                animator.Play ("Walking_Up");
+                animator.Play ("Shooting_Up_Walking_Down");
                 break;
             case PlayerAttributes.StateMachine.SHOOTING_UP_WALKING_LEFTRIGHT:
                 animator.Play ("Walking_Up");
                 break;
             case PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_UP:
-                animator.Play ("Walking_Down");
+                animator.Play ("Shooting_Down_Walking_Up");
                 break;
             case PlayerAttributes.StateMachine.SHOOTING_DOWN_WALKING_LEFTRIGHT:
                 animator.Play ("Walking_Down");
                 break;
             case PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_RIGHT:
-                animator.Play ("Walking_Left");
+                animator.Play ("Shooting_Left_Walking_Right");
                 break;
             case PlayerAttributes.StateMachine.SHOOTING_LEFT_WALKING_UPDOWN:
                 animator.Play ("Walking_Left");
                 break;
             case PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_LEFT:
-                animator.Play ("Walking_Right");
+                animator.Play ("Shooting_Right_Walking_Left");
                 break;
             case PlayerAttributes.StateMachine.SHOOTING_RIGHT_WALKING_UPDOWN:
                 animator.Play ("Walking_Right");
