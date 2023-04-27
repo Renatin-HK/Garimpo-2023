@@ -78,11 +78,11 @@ public class PlayerAttributes : MonoBehaviour {
     }
 
     private void Start () {
-        newState = StateMachine.IDLE_UP;
-        state = StateMachine.IDLE_UP;
+        // newState = StateMachine.IDLE_UP;
+        // state = StateMachine.IDLE_UP;
         canChangeState = true;
         player = GetComponent<Transform> ();
-        walkDir = 4;
-        shootDir = 4;
+        walkDir = 2;
+        shootDir = 2;
     }
 }
